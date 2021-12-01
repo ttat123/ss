@@ -94,18 +94,18 @@ https://netnr.eu.org
            
             {
                 name: "字节跳动 CDN",
-                cr: 10578 / 10578,
+                cr: 1126 / 10578,
                 link: "https://s1.pstatp.com/cdn/expire-1-M/sql.js/1.2.2/dist/sql-asm-debug.js"
             },
             
             {
                 name: "CF CDN",
-                cr: 10578 / 10578,
+                cr: 1126 / 10578,
                 link: "http://s.tzco.xyz/cdn/expire-1-M/sql.js/1.2.2/dist/sql-asm-debug.js"
             },
             {
                 name: "360 CDN",
-                cr: 21784 / 2723,
+                cr: 290 / 2723,
                 link: "https://p1.ssl.qhimg.com/t016d62e58406ac29b9.png"
             }
         ],
@@ -193,7 +193,7 @@ https://netnr.eu.org
         var sps = [];
         //过程
         sp.progress = function (speed) {
-            $('#divresult').append('<div>' + speed + ' Mbps</div>');
+            $('#divresult').append('<div>' + speed + ' MiB/s</div>');
             sps.push(speed);
         };
         //完成
@@ -203,7 +203,7 @@ https://netnr.eu.org
                 sum += this * 1;
             });
             var avg = (sum / sps.length).toFixed(2);
-            $('<h2>平均：' + avg + ' Mbps</h2>').insertBefore($('#divresult').children().first())
+            $('<h2>平均：' + avg + ' MiB/s</h2>').insertBefore($('#divresult').children().first())
 
             $('#seSpeedServer')[0].disabled = false;
         };
